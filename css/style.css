@@ -1,9 +1,27 @@
 .header {
 	display: flex;
+	height: calc(100vh - 26px);
 }
 
-.header img {
-	height: 200px;
-	width: 200px;
-	border-radius: 50px;
+.title {
+	display: flex;
+	width: 100%;
+	margin: auto;
+}
+
+.title > img {
+	height: 16rem;
+	width: 16rem;
+	border-radius: 4rem;
+	margin-right: 2rem;
+}
+
+.title > div {
+	display: flex;
+	flex-direction: column;
+	margin-top: 1rem;
+}
+
+.title h6 {
+	margin-top: 0rem;
 }
