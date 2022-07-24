@@ -34,8 +34,7 @@ $(window).on('load', () => {
 	})
 
 	// nav reveal & hide
-	$('.fa-cog').click(() => {
-		console.log('hi')
+	$('.fa-plus').click(() => {
 		$('.nav').css("display", "flex").hide().fadeIn('fast')
 	})
 
@@ -43,4 +42,28 @@ $(window).on('load', () => {
 		$('.nav').fadeOut('fast')
 	})
 
+	$( window ).resize(() => {
+		if ($( window ).width() > 51 * (parseFloat($("body").css("font-size")) - 2.5)) {
+			$('.nav').css('display') == 'none' ? $('.nav').css('display', 'flex') : null
+		}
+	})
+
+	// theme change
+	themes = ['bright', 'pink', 'dark', 'vader']
+	theme_i = 0
+	$('#theme').click(() => {
+		theme_i++
+		theme_i > themes.length - 1 ? theme_i = 0 : null
+		$('#themehref').attr('href', 'css/sakura-' + themes[theme_i] + '.css')
+		$('#theme').text(themes[theme_i])
+	})
+
+	// language change
+	langs = ['eng', 'chi', 'jap', 'uwu']
+	lang_i = 0
+	$('#lang').click(() => {
+		lang_i++
+		lang_i > langs.length - 1 ? lang_i = 0 : null
+		$('#lang').text(langs[lang_i])
+	})
 })

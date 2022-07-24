@@ -21,13 +21,13 @@ html {
 	margin-top: auto;
 }
 
-.fa-cog {
+.fa-plus {
 	position: fixed;
 	left: 0;
 	padding: 1rem;
 }
 
-.fa-times, .fa-cog, .nav > hr {
+.fa-times, .fa-plus, .nav > hr {
 	display: none;
 }
 
@@ -58,7 +58,7 @@ hr {
 		margin-top: 0;
 	}
 
-	.fa-times, .fa-cog, .nav > hr {
+	.fa-times, .fa-plus, .nav > hr {
 		display: block;
 	}
 }
