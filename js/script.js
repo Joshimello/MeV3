@@ -33,4 +33,14 @@ $(window).on('load', () => {
 	   	delay: 1000
 	})
 
+	// nav reveal & hide
+	$('.fa-cog').click(() => {
+		console.log('hi')
+		$('.nav').css("display", "flex").hide().fadeIn('fast')
+	})
+
+	$('.fa-times').click(function(){
+		$('.nav').fadeOut('fast')
+	})
+
 })
