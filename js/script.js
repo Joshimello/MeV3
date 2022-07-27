@@ -19,6 +19,11 @@ $(window).on('load', () => {
 		})
 	}
 
+	ScrollReveal().reveal('h2', {
+		distance: '0.5rem',
+		duration: '1000'
+	})
+
 	// title text rotation
 	$('#title-text').teletype({
 	    text: [
