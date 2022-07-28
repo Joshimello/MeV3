@@ -1,3 +1,7 @@
+// hide title & disable scroll
+$('.title > *').css('visibility', 'hidden')
+$('html, body').css({'overflow': 'hidden', 'height': '100%'})
+
 // theme get & set
 const themes = ['bright', 'pink', 'dark', 'vader']
 themes.includes(Cookies.get('theme')) ? null : Cookies.set('theme', 'bright')
@@ -8,6 +12,7 @@ theme_i = themes.indexOf(Cookies.get('theme'))
 $(window).on('load', () => {
 
 	// preloader
+	$('html, body').css({'overflow': 'auto', 'height': 'auto'})
 	$('.preloader').fadeOut('fast')
 
 	// entry animation
@@ -28,7 +33,7 @@ $(window).on('load', () => {
 			delay: '2000',
 		})
 	}
-
+	
 	ScrollReveal().reveal('h2', {
 		distance: '0.5rem',
 		duration: '1000'
