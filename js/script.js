@@ -1,11 +1,12 @@
 // theme get & set
 const themes = ['bright', 'pink', 'dark', 'vader']
-Cookies.get('theme') == undefined ? Cookies.set('theme', 'bright') : null
-theme_i = themes.indexOf(Cookies.get('theme'))
+themes.includes(Cookies.get('theme')) ? null : Cookies.set('theme', 'bright')
 $('#themehref').attr('href', 'css/sakura-' + Cookies.get('theme') + '.css')
 $('#theme').text(Cookies.get('theme'))
+theme_i = themes.indexOf(Cookies.get('theme'))
 
 $(window).on('load', () => {
+
 	// preloader
 	$('.preloader').fadeOut('fast')
 
