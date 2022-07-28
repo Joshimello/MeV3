@@ -2,6 +2,20 @@ html {
 	scroll-behavior: smooth;
 }
 
+.preloader {
+	position: fixed;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+	margin: 0;
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: saturate(180%) blur(10px);
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .nav {
 	position: fixed;
 	left: 0;
