@@ -1,4 +1,13 @@
+// theme get & set
+const themes = ['bright', 'pink', 'dark', 'vader']
+Cookies.get('theme') == undefined ? Cookies.set('theme', 'bright') : null
+theme_i = themes.indexOf(Cookies.get('theme'))
+$('#themehref').attr('href', 'css/sakura-' + Cookies.get('theme') + '.css')
+$('#theme').text(Cookies.get('theme'))
+
 $(window).on('load', () => {
+	// preloader
+	$('.preloader').fadeOut('fast')
 
 	// entry animation
 	for (const [key, value] of Object.entries({ '.a': '0', '.b': '500', '.c': '1000' })) {
@@ -54,13 +63,12 @@ $(window).on('load', () => {
 	})
 
 	// theme change
-	themes = ['bright', 'pink', 'dark', 'vader']
-	theme_i = 0
 	$('#theme').click(() => {
 		theme_i++
 		theme_i > themes.length - 1 ? theme_i = 0 : null
 		$('#themehref').attr('href', 'css/sakura-' + themes[theme_i] + '.css')
 		$('#theme').text(themes[theme_i])
+		Cookies.set('theme', themes[theme_i])
 	})
 
 	// language change
@@ -71,4 +79,5 @@ $(window).on('load', () => {
 		lang_i > langs.length - 1 ? lang_i = 0 : null
 		$('#lang').text(langs[lang_i])
 	})
+
 })
