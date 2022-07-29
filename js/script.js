@@ -86,4 +86,24 @@ $(window).on('load', () => {
 		$('#lang').text(langs[lang_i])
 	})
 
+	// age number
+	var age, age_diff
+	age_diff = (d1, d2) => {
+	    var diffDays, oneDay
+	    oneDay = 24 * 60 * 60 * 1000
+	    diffDays = (d2 - Date.parse(d1)) / oneDay
+	    return diffDays
+	}
+
+	age = () => {
+	    num = age_diff('Sep 4, 2004 00:00:00', new Date()) / 365
+	    $('#age').text(num.toString().slice(0, 12))
+	}
+
+	setInterval(age, 50);
+
+
+
+
+
 })
