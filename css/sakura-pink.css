@@ -3,6 +3,13 @@
  * Minimal css theme.
  * Project: https://github.com/oxalorg/sakura/
  */
+
+:root {
+  --text-color: #49002d;
+  --main-color: #ffe4f5;
+  --sub-color: #f8d2e9;
+}
+
 /* Body */
 html {
   font-size: 62.5%;
