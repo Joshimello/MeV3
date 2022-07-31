@@ -1,3 +1,5 @@
+@import url('progressbar.css');
+
 html {
 	scroll-behavior: smooth;
 }
@@ -138,46 +140,3 @@ section > h2 {
 		text-align: center;
 	}
 }
-
-.about-lang {
-	width: 100%;
-	display: flex;
-	gap: 1rem;
-}
-
-.column {
-	flex: 1;
-}
-
-.flex {
-	width: 100%;
-	display: flex;
-	gap: 1rem;
-}
-
-.progress {
-	background: var(--sub-color);
-	padding: 0em 1em .5em 1em;
-	margin-bottom: 1rem;
-}
-
-.bar-out {
-	width: 100%;
-	height: .8rem;
-	border-radius: .4rem;
-	background: var(--main-color);
-	box-sizing: border-box;
-	padding: .3rem;
-}
-
-.bar-in {
-	height: 100%;
-	border-radius: .5rem;
-	background: var(--text-color);
-}
-
-.bar-out > .one { width: 20% }
-.bar-out > .two { width: 40% }
-.bar-out > .three { width: 60% }
-.bar-out > .four { width: 80% }
-.bar-out > .five { width: 100% }

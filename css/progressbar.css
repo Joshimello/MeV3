@@ -1,0 +1,70 @@
+.container-p {
+	width: 100%;
+	display: flex;
+	gap: 1rem;
+}
+
+.half-p {
+	flex: 1;
+}
+
+@media (max-width: 684px) {
+    .container-p {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.half-p {
+		flex: 0 1 auto;
+	}
+
+}
+
+.p-sub {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	font-size: .75em;
+}
+
+.p-sub > .p-label {
+	flex: 4;
+}
+
+.p-sub > .p-bar {
+	flex: 6;
+}
+
+.p-bar + .p-sub {
+	margin-top: 1rem;
+}
+
+.p {
+	background: var(--sub-color);
+	padding: .3em 1em .2em 1em;
+	margin-bottom: 1rem;
+}
+
+.p-bar {
+	width: 100%;
+	height: .8rem;
+	border-radius: .4rem;
+	background: var(--main-color);
+	box-sizing: border-box;
+}
+
+.p-line {
+	height: 100%;
+	border-radius: .5rem;
+	box-sizing: border-box;
+	border: .15rem solid var(--text-color);
+	background: var(--sub-color);
+}
+
+.p-bar > .zero { width: 0% }
+.p-bar > .one { width: 20% }
+.p-bar > .two { width: 40% }
+.p-bar > .three { width: 60% }
+.p-bar > .four { width: 80% }
+.p-bar > .five { width: 100% }
