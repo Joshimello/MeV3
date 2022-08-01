@@ -60,11 +60,22 @@
 	box-sizing: border-box;
 	border: .15rem solid var(--text-color);
 	background: var(--sub-color);
+	width: 0%;
 }
 
-.p-bar > .zero { width: 0% }
-.p-bar > .one { width: 20% }
-.p-bar > .two { width: 40% }
-.p-bar > .three { width: 60% }
-.p-bar > .four { width: 80% }
-.p-bar > .five { width: 100% }
+@keyframes showline {
+	0% {
+		width: 0%;
+	}
+	
+	100% {
+		width: var(--percent);
+	}
+}
+
+.p-bar > .zero { --percent: 0% }
+.p-bar > .one { --percent: 20% }
+.p-bar > .two { --percent: 40% }
+.p-bar > .three { --percent: 60% }
+.p-bar > .four { --percent: 80% }
+.p-bar > .five { --percent: 100% }

@@ -33,10 +33,26 @@ $(window).on('load', () => {
 			delay: '2000',
 		})
 	}
-	
-	ScrollReveal().reveal('h2', {
-		distance: '0.5rem',
-		duration: '1000'
+
+	for (const value of ['h2', 'h5', 'p']) {
+		ScrollReveal().reveal('section > ' + value, {
+			distance: '0.5rem',
+			duration: '1000'
+		})		
+	}
+
+	for (const value of ['pre', '.container-p']) {
+		ScrollReveal().reveal('section > ' + value, {
+			origin: 'left',
+			distance: '2rem',
+			duration: '1000'
+		})		
+	}
+
+	ScrollReveal().reveal('section .p-line', {
+		afterReveal: function(el) {
+			el.style.animation = 'showline 1s ease 0s 1 normal forwards';
+		}
 	})
 
 	// title text rotation
