@@ -1,3 +1,4 @@
+@import url('header.css');
 @import url('progressbar.css');
 @import url('navigation.css');
 
@@ -25,57 +26,4 @@ section {
 
 section > h2 {
 	padding-top: 2rem;
-}
-
-.header {
-	display: flex;
-}
-
-.title {
-	display: flex;
-	width: 100%;
-	margin: auto;
-}
-
-.title > img {
-	height: 16rem;
-	width: 16rem;
-	border-radius: 4rem;
-	margin-right: 3rem;
-	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-		        0 1px 5px 0 rgba(0, 0, 0, 0.12),
-		        0 3px 1px -2px rgba(0, 0, 0, 0.2);
-}
-
-.title > div {
-	display: flex;
-	flex-direction: column;
-	margin-top: 1rem;
-}
-
-.title h3 {
-	display: flex;
-	gap: 1rem;
-}
-
-.title h6 {
-	margin-top: 0rem;
-}
-
-@media (max-width: 684px) {
-	.title {
-		flex-direction: column;
-	}
-
-	.title > img {
-		margin: auto;
-	}
-
-	.title h3 {
-		justify-content: center;
-	}
-
-	.title h6 {
-		text-align: center;
-	}
 }
