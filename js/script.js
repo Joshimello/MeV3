@@ -30,7 +30,7 @@ $(window).on('load', () => {
 		})		
 	}
 
-	for (const value of ['pre', '.container-p']) {
+	for (const value of ['pre', '.container-p', '.link']) {
 		ScrollReveal().reveal('section > ' + value, {
 			origin: 'left',
 			distance: '2rem',
