@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="I love katsudon">
+    <meta name="keywords" content="Joshimello">
+    <meta name="author" content="Joshua Lean">
+    <title>Joshimello</title>
+    <link rel="icon" href="asset/iconn.png">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/sakura-bright.css" id="themehref">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/js.cookie.min.js"></script>
+    <script src="js/teletype.min.js"></script>
+    <script src="js/scrollreveal.min.js"></script>
+    <script src="js/theme.js"></script>
+</head>
+
+<body>
+    <div class="preloader">
+        <img src="asset/preload.gif">
+    </div>
+
+    <div class="nav">
+        <i class="fal fa-times fa-fw"></i>
+        <a href="#me">me</a>
+        <a href="#about">about</a>
+        <a href="#works">works</a>
+        <a href="#contact">contact</a>
+        <hr>
+        <a href="javascript:;" id="theme">bright</a>
+        <a href="javascript:;" id="lang">eng</a>
+    </div>
+    <i class="fal fa-plus fa-2x fa-fw"></i>
+
+    <section class="header" id="me">
+        <div class="title">
+            <img class="title-pfp" src="asset/profile.jpg">
+            <div>
+                <h3>
+                    <span class="a">Ahoy</span>
+                    <span class="b">I'm</span>
+                    <span class="c"><b>Joshimello</b></span>
+                </h3>
+                <h6>I love <em id="title-text"></em> & <em>Katsudon</em></h6>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About</h2>
+        <h5>Who is this guy?</h5>
+        <p>Yo! Wussap, I'm Joshua. I'm a 18 years old student currently studying at National Tsing Hua University. As of now, it is my dream to be a web developer.</p>
+
+        <h5>How nerd is this dude?</h5>
+        <p>Well, not exactly nerd, but that is what my friends call me. Before entering university, all my currently known languages were self taught. Anyways, I'm mostly interested in laugages that surround web development and game modding.</p>
+
+        <div class="container-p">
+            <div class="half-p">
+                <div class="p">
+                    <div class="p-label"><i class="fab fa-html5 fa-fw"></i> HTML +   <i class="fab fa-css3-alt fa-fw"></i> CSS</div>
+                    <div class="p-bar"><div class="p-line four"></div></div>
+                    <div class="p-sub">
+                        <li class="p-label">Bootstrap</li>
+                        <div class="p-bar"><div class="p-line four"></div></div>
+                    </div>
+                    <div class="p-sub">
+                        <li class="p-label">Tailwind</li>
+                        <div class="p-bar"><div class="p-line one"></div></div>
+                    </div>
+                </div>
+                <div class="p">
+                    <div class="p-label"><i class="fab fa-js-square fa-fw"></i> JavaScript</div>
+                    <div class="p-bar"><div class="p-line four"></div></div>
+                    <div class="p-sub">
+                        <li class="p-label">JQuery</li>
+                        <div class="p-bar"><div class="p-line four"></div></div>
+                    </div>
+                    <div class="p-sub">
+                        <li class="p-label">Anime.js</li>
+                        <div class="p-bar"><div class="p-line three"></div></div>
+                    </div>
+                    <div class="p-sub">
+                        <li class="p-label">Three.js</li>
+                        <div class="p-bar"><div class="p-line two"></div></div>
+                    </div>
+                </div>
+                <div class="p">
+                    <div class="p-label"><i class="fab fa-node-js fa-fw"></i> NodeJS</div>
+                    <div class="p-bar"><div class="p-line two"></div></div>
+                    <div class="p-sub">
+                        <li class="p-label">Express</li>
+                        <div class="p-bar"><div class="p-line two"></div></div>
+                    </div>
+                    <div class="p-sub">
+                        <li class="p-label">Socket.io</li>
+                        <div class="p-bar"><div class="p-line three"></div></div>
+                    </div>
+                    <div class="p-sub">
+                        <li class="p-label">Discord.js</li>
+                        <div class="p-bar"><div class="p-line two"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="half-p">
+                <div class="p">
+                    <div class="p-label"><i class="fab fa-python fa-fw"></i> Python</div>
+                    <div class="p-bar"><div class="p-line four"></div></div>
+                    <div class="p-sub">
+                        <li class="p-label">PyAutoGUI</li>
+                        <div class="p-bar"><div class="p-line three"></div></div>
+                    </div>
+                    <div class="p-sub">
+                        <li class="p-label">OpenCV</li>
+                        <div class="p-bar"><div class="p-line two"></div></div>
+                    </div>
+                    <div class="p-sub">
+                        <li class="p-label">Selenium</li>
+                        <div class="p-bar"><div class="p-line three"></div></div>
+                    </div>
+                    <div class="p-sub">
+                        <li class="p-label">Flask</li>
+                        <div class="p-bar"><div class="p-line two"></div></div>
+                    </div>
+                </div>
+                <div class="p">
+                    <div class="p-label"><i class="fal fa-server fa-fw"></i> Other Web</div>
+                    <div class="p-bar"><div class="p-line two"></div></div>
+                    <div class="p-sub">
+                        <li class="p-label">PHP</li>
+                        <div class="p-bar"><div class="p-line three"></div></div>
+                    </div>
+                    <div class="p-sub">
+                        <li class="p-label">MySQL</li>
+                        <div class="p-bar"><div class="p-line one"></div></div>
+                    </div>
+                </div>
+                <div class="p">
+                    <div class="p-label"><i class="fal fa-brackets fa-fw"></i> Other Language</div>
+                    <div class="p-bar"><div class="p-line two"></div></div>
+                    <div class="p-sub">
+                        <li class="p-label">C & C++</li>
+                        <div class="p-bar"><div class="p-line one"></div></div>
+                    </div>
+                    <div class="p-sub">
+                        <li class="p-label">AHK</li>
+                        <div class="p-bar"><div class="p-line three"></div></div>
+                    </div>
+                </div>
+            </div>       
+        </div>
+
+        <h5>This guy is very nerd indeed.</h5>
+        <p>Not sure if I have to be happy or sad about that... Anyways! Of course I do more than just coding, such as: Editing videos, cooking food, playing games, and more! But you got to meet me in real life to know more muahahaha...</p>
+
+<pre><code>const tldr = {
+    'name': 'Joshua',
+    'age': <span id="age"></span>,
+    'education': {
+        2022: {
+            'university': 'National Tsing Hua University',
+            'course': 'Interdisciplinary Program'
+        }
+    },
+    'experience': {
+        2022: 'Soon!'
+    },
+    'target': 'Web Developer'
+}</code></pre>
+
+    </section>
+
+    <section id="works">
+        <h2>Works</h2>
+        <h5>Below is where I throw everything I do.</h5>
+        <div class="container-w">
+            
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <h5>Pages</h5>
+        <div class="link">
+            <i class="fas fa-globe fa-fw"></i> 
+            <a target="_blank" href="https://neko.chibimello.com">neko.chibimello.com</a>
+        </div>
+        <div class="link">
+            <i class="fab fa-github fa-fw"></i> 
+            <a target="_blank" href="https://github.com/joshimello">Joshimello</a>
+        </div>
+        <h5>Social</h5>
+        <div class="link">
+            <i class="fab fa-facebook fa-fw"></i> 
+            <a target="_blank" href="https://www.facebook.com/people/Joshua-Lean/100077052090060">Joshua Lean</a>
+        </div>
+        <div class="link">
+            <i class="fab fa-twitter fa-fw"></i> 
+            <a target="_blank" href="https://twitter.com/Joshimello">@Joshimello</a>
+        </div>
+        <h5>Chat</h5>
+        <div class="link">
+            <i class="fab fa-line fa-fw"></i> 
+            <a target="_blank" href="https://line.me/ti/p/jOdcdMo9RY">Josh</a>
+        </div>
+        <div class="link">
+            <i class="fab fa-discord fa-fw"></i> 
+            <a target="_blank" href="https://discordapp.com/users/365045703296155648">Joshimello#8677</a>
+        </div>
+        <div class="link">
+            <i class="fas fa-at fa-fw"></i> 
+            <a target="_blank" href="mailto:josh@chibimello.com">joshualeanjw@gmail.com</a>
+        </div>
+    </section>
+
+    <footer>
+        <span>minimal design using <a target="_blank" href="https://github.com/oxalorg/sakura">Sakura</a></span>
+        <p>made with uwu by <a target="_blank" href="https://github.com/joshimello">Joshimello</a></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
