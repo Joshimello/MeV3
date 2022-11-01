@@ -94,6 +94,8 @@ const animate = t => {
 
 	cubeTop.rotation.y += 0.01
     cubeBtm.rotation.y -= 0.01
+    cubeTop.rotation.x += 0.002
+    cubeBtm.rotation.x += 0.002
 
     renderer.render(scene, camera)
 }
