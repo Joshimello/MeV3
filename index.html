@@ -11,35 +11,57 @@
     <script src="https://unpkg.com/three@0.146.0/build/three.min.js"></script>
     <script src="https://unpkg.com/three@0.146.0/examples/js/loaders/GLTFLoader.js"></script>
     <script src="https://unpkg.com/three@0.146.0/examples/js/controls/OrbitControls.js"></script>
-    <script src="https://unpkg.com/es6-tween@5.5.11/bundled/Tween.min.js"></script>
+    <script src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js" defer></script>
+    <script src="js/text.js"></script>
 </head>
 
 <body class="bg-washed-yellow flex flex-column vh-100">
     <div class="bb flex light-purple self-start w-100">
         <div class="pv2 pv4-l ph2 ph5-l w-third f4 f4-ns flex items-center">
-            <a class="i">(JP) <sup>6</sup></a>
+            <a class="i link light-purple" href="/">(JP) <sup>6</sup></a>
         </div>
         <div class="bl-ns br-ns ph2 w-third-ns f5 flex justify-around items-center light-purple">
-        	<a class="dn db-ns ph0 ph4-l link hover-purple light-purple" href="#">AHOY</a>
-        	<a class="dn db-ns ph0 ph4-l link hover-purple light-purple" href="#">WHO</a>
-        	<a class="dn db-ns ph0 ph4-l link hover-purple light-purple" href="#">WHAT</a>
+        	<a class="dn db-ns ph0 ph4-l link hover-purple light-purple" href="#ahoy">AHOY</a>
+        	<a class="dn db-ns ph0 ph4-l link hover-purple light-purple" href="#who">WHO</a>
+        	<a class="dn db-ns ph0 ph4-l link hover-purple light-purple" href="#what">WHAT</a>
         </div>
         <div class="pv2 pv4-l ph2 ph5-l w-third-ns f2 f4-ns tr ml-auto">
         	<a class="ml3-ns hover-purple light-purple" target="_blank" href="mailto:joshualeanjw@gmail.com"><i class="fa-fw fa-solid fa-circle-envelope"></i></a>
         	<a class="ml3-ns hover-purple light-purple" target="_blank" href="https://github.com/joshimello"><i class="fa-fw fa-brands fa-github"></i></a>
         </div>
     </div>
-    <div class="code bb flex light-purple w-100 f4 db dn-ns ph2 pv2 justify-around items-center">
-    	<a class="link hover-purple light-purple" href="#">AHOY</a>
-       	<a class="link hover-purple light-purple" href="#">WHO</a>
-	   	<a class="link hover-purple light-purple" href="#">WHAT</a>
+    <div class="bb flex light-purple w-100 f4 db dn-ns ph2 pv2 justify-around items-center">
+    	<a class="link hover-purple light-purple" href="#ahoy">AHOY</a>
+       	<a class="link hover-purple light-purple" href="#who">WHO</a>
+	   	<a class="link hover-purple light-purple" href="#what">WHAT</a>
     </div>
-    <div class="main h-100 w-100 light-purple">
-    	<div class="ph4 ph5-l flex-0">
-    		<h1 class="f-5 f-6-ns mb0">Cube.</h1>
+    <div x-data class="h-100 w-100 light-purple overflow-y-auto" id="main">
+
+    	<div class="ph4 ph5-l min-vh-100" id="ahoy">
+    		<h1 class="f-5 f-6-ns mv0 pt4">Cube.</h1>
 			<span class="f4 ml1 ml2-ns">And I love katsudon.</span><br>
 			<span class="f6 ml1 ml2-ns">I'm Joshua btw.</span>
     	</div>
+
+    	<div class="ph4 ph5-l min-vh-100 w-100 w-70-m w-50-l" id="who">
+    		<h1 class="f1 f-5-ns mv0 pt4">Matcha.</h1>
+			<span class="f4">I love matcha too.</span><br>
+			<span class="f6">Oh but I'm not matcha, I'm Joshua Lean, a <span class="code mb2" id="age"></span> yrs old IPTH student at NTHU. I enjoy playing with cool random webdev related stuff.</span>
+			<template x-for="q in questions">
+				<div class="qna mt2" x-data="{o: false}">
+					<span class="i f5 pointer dim nosel" x-on:click="o = !o">
+						<i class="fa-light fa-arrow-down-right"></i> 
+						<span x-text="q.title"></span>
+					</span>
+					<p class="f6 mt0" x-html="q.text" x-show="o"></p>
+				</div>
+			</template>
+    	</div>
+
+    	<div class="ph4 ph5-l min-vh-100 w-100 w-70-m w-50-l" id="what">
+    		<h1 class="f1 f-5-ns mv0 pt4">Katsudon.</h1>
+			<span class="f4">It's very yummy no kidding.</span><br>
+		</div>
     </div>
     <div class="bt flex light-purple self-end w-100">
     	<div class="br pv2 pv4-l ph2 ph5-l w-third f4">

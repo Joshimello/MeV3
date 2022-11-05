@@ -55,45 +55,66 @@ loader.load('asset/cube/scene.gltf', handle_load)
 let cube
 let cubeTop = new THREE.Group()
 let cubeBtm = new THREE.Group()
+
 function handle_load(gltf) {
 
     cube = gltf.scene
 
     cubes = [
-    	{'x': 0.525, 'y': -0.525, 'z': 0.525},
-    	{'x': -0.525, 'y': -0.525, 'z': 0.525},
-    	{'x': 0.525, 'y': -0.525, 'z': -0.525},
-    	{'x': -0.525, 'y': -0.525, 'z': -0.525},
-    	{'x': 0.525, 'y': 0.525, 'z': 0.525},
-    	{'x': -0.525, 'y': 0.525, 'z': 0.525},
-    	{'x': 0.525, 'y': 0.525, 'z': -0.525},
-    	{'x': -0.525, 'y': 0.525, 'z': -0.525}
+        { 'x': 0.525, 'y': -0.525, 'z': 0.525 },
+        { 'x': -0.525, 'y': -0.525, 'z': 0.525 },
+        { 'x': 0.525, 'y': -0.525, 'z': -0.525 },
+        { 'x': -0.525, 'y': -0.525, 'z': -0.525 },
+        { 'x': 0.525, 'y': 0.525, 'z': 0.525 },
+        { 'x': -0.525, 'y': 0.525, 'z': 0.525 },
+        { 'x': 0.525, 'y': 0.525, 'z': -0.525 },
+        { 'x': -0.525, 'y': 0.525, 'z': -0.525 }
     ]
 
     cubes.forEach(i => {
-    	let temp = cube.clone()
-    	temp.position.set(i.x, i.y, i.z)
-    	
-    	if(i.y > 0){ cubeTop.add(temp) }
-    	if(i.y < 0){ cubeBtm.add(temp) }
-    	
-    	//scene.add(temp)
+        let temp = cube.clone()
+        temp.position.set(i.x, i.y, i.z)
+
+        if (i.y > 0) { cubeTop.add(temp) }
+        if (i.y < 0) { cubeBtm.add(temp) }
+
+        //scene.add(temp)
     })
 
     scene.add(cubeTop, cubeBtm)
-   	animate()
+    animate()
 }
 
 onmousemove = e => {
-	cubeTop.rotation.y += e.clientX / 20000
+    cubeTop.rotation.y += e.clientX / 20000
     cubeBtm.rotation.y -= e.clientY / 40000
 }
 
-const animate = t => {
+
+document.getElementById('main').addEventListener('scroll', e => {
+    cubeTop.rotation.y += 0.07
+    cubeBtm.rotation.y -= 0.07
+    document.getElementById('bg').style.opacity = (1000 - document.getElementById('main').scrollTop) / 1000
+    document.getElementById('bg').style.filter = `blur(${document.getElementById('main').scrollTop / 100}px)`
+})
+
+
+/*
+setOpacity(cubeTop, 0.1);
+function setOpacity(obj, opacity) {
+    obj.children.forEach((child) => {
+        setOpacity(child, opacity)
+    })
+    if (obj.material) {
+        obj.material.opacity = opacity
+    }
+}*/
+
+const animate = () => {
     requestAnimationFrame(animate)
 
-	cubeTop.rotation.y += 0.01
-    cubeBtm.rotation.y -= 0.01
+    cubeTop.rotation.y += 0.005
+    cubeBtm.rotation.y -= 0.005
     cubeTop.rotation.x += 0.002
     cubeBtm.rotation.x += 0.002
 

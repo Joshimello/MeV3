@@ -9,8 +9,13 @@ body {
     transition: background 0.5s ease;
 }
 
+div, i, a {
+	transition: color 0.1s ease;
+}
+
 div {
 	font-family: "space";
+	scroll-behavior: smooth;
 }
 
 canvas {
@@ -18,4 +23,21 @@ canvas {
     top: 0;
     left: 0;
     z-index: -1;
+}
+
+.overflow-y-auto {
+	-ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.overflow-y-auto::-webkit-scrollbar { 
+    display: none;
+}
+
+.nosel {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
